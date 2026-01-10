@@ -1,7 +1,7 @@
 input: ./src
 output: .retype
 
-url: docs.indevs.in
+url: domain-docs.stackryze.com
 
 start:
   # Uncomment the next line to try Retype Pro features
@@ -26,7 +26,7 @@ links:
     icon: globe
     target: blank
   - text: GitHub
-    link: https://github.com/indevs-in/docs
+    link: https://github.com/stackryze/domains-docs
     icon: mark-github
     target: blank
   - text: Support
@@ -38,12 +38,12 @@ footer:
   copyright: "&copy; Copyright {{ year }} Stackryze. All rights reserved."
   links:
     - text: GitHub
-      link: https://github.com/indevs-in
+      link: https://github.com/stackryze
       icon: mark-github
       target: blank
 
 edit:
-  repo: "https://github.com/indevs-in/docs"
+  repo: "https://github.com/stackryze/domains-docs"
   base: /src
   branch: main
   label: Edit this page
