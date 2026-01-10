@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://docs.indevs.in/sitemap.xml.gz
+Sitemap: https://domain-docs.stackryze.com/sitemap.xml.gz
