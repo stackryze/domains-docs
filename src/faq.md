@@ -57,7 +57,7 @@ Common reasons: name too short/long, invalid characters, already taken, or in co
 
 ### What are nameservers?
 
-Nameservers tell the internet where to find your domain. Default: `n1.stackryze.com` and `n2.stackryze.com`.
+Nameservers tell the internet where to find your domain. Default: `ns1.stackryze.com` and `ns2.stackryze.com`.
 
 [DNS setup guides →](dns-providers)
 
