@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.821713139328">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.821715617577">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.11.0">
@@ -30,12 +30,12 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../resources/css/retype.css?v=3.11.0.821713139328" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.11.0.821715617577" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.821713139328" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.821715617577" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.11.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.821713139328" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.11.0.821713139328" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.821715617577" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.11.0.821715617577" defer></script>
     <script id="mermaid-js" data-cfasync="false" src="../../resources/js/mermaid.js?v=3.11.0" defer></script>
 </head>
 <body>
@@ -284,7 +284,7 @@
         </div>
     </div>
 </div>
-<p>PowerDNS Authoritative Server is a versatile, open-source nameserver that supports multiple backends for storing DNS records. Stackryze uses PowerDNS to power <strong>n1.stackryze.com</strong> and <strong>n2.stackryze.com</strong>, which manage all <code v-pre>indevs.in</code> subdomains.</p>
+<p>PowerDNS Authoritative Server is a versatile, open-source nameserver that supports multiple backends for storing DNS records. Stackryze uses PowerDNS to power <strong>ns1.stackryze.com</strong> and <strong>ns2.stackryze.com</strong>, which manage all <code v-pre>indevs.in</code> subdomains.</p>
 <hr>
 <doc-anchor-target id="why-powerdns">
     <h2>
@@ -892,8 +892,8 @@ dig yourname.indevs.in @1.1.1.1</code></pre>
 </doc-anchor-target>
 <p>Stackryze uses a master-slave setup:</p>
 <ul>
-<li><strong>n1.stackryze.com</strong> - <strong>Master (Primary)</strong> - Receives all DNS updates via API</li>
-<li><strong>n2.stackryze.com</strong> - <strong>Slave (Secondary)</strong> - Replicates from n1 via AXFR</li>
+<li><strong>ns1.stackryze.com</strong> - <strong>Master (Primary)</strong> - Receives all DNS updates via API</li>
+<li><strong>ns2.stackryze.com</strong> - <strong>Slave (Secondary)</strong> - Replicates from n1 via AXFR</li>
 </ul>
 <p>When a user updates their nameservers through the Stackryze platform, the API updates n1 (master), and n2 (slave) automatically receives the changes via AXFR zone transfer.</p>
 <doc-anchor-target id="master-server-configuration-n1yourdomaincom">
@@ -1367,8 +1367,8 @@ log-dns-queries=no</code></pre>
 </doc-anchor-target>
 <p>Stackryze uses PowerDNS to power our authoritative nameservers:</p>
 <ul>
-<li><strong>n1.stackryze.com</strong> (Primary) - PowerDNS Authoritative Server with PostgreSQL backend</li>
-<li><strong>n2.stackryze.com</strong> (Secondary) - PowerDNS Authoritative Server with PostgreSQL replication</li>
+<li><strong>ns1.stackryze.com</strong> (Primary) - PowerDNS Authoritative Server with PostgreSQL backend</li>
+<li><strong>ns2.stackryze.com</strong> (Secondary) - PowerDNS Authoritative Server with PostgreSQL replication</li>
 </ul>
 <p>These servers manage DNS delegation for all <code v-pre>indevs.in</code> subdomains through PowerDNS&#x27;s HTTP API, allowing automated zone creation and record management when users register domains through our platform.</p>
 <hr>
