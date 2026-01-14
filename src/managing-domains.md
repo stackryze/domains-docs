@@ -54,7 +54,7 @@ Set up your DNS provider first:
 1. Go to **[My Domains](https://domain.stackryze.com/my-domains)**
 2. Click the **"Manage"** button for your domain
 3. In the DNS Configuration section, click **"Edit"**
-4. Replace the default nameservers (`n1.stackryze.com`, `n2.stackryze.com`) with your new ones:
+4. Replace the default nameservers (`ns1.stackryze.com`, `ns2.stackryze.com`) with your new ones:
    - **Primary Nameserver**: `ns1.example.com`
    - **Secondary Nameserver**: `ns2.example.com`
 5. Click **"Save"**

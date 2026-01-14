@@ -13,7 +13,7 @@ icon: server
 > 
 > PowerDNS is a complex, self-hosted DNS solution that requires significant technical expertise in server administration, DNS protocols, and database management. This setup is recommended only for experienced system administrators who understand DNS internals, security hardening, and high-availability infrastructure.
 
-PowerDNS Authoritative Server is a versatile, open-source nameserver that supports multiple backends for storing DNS records. Stackryze uses PowerDNS to power **n1.stackryze.com** and **n2.stackryze.com**, which manage all `indevs.in` subdomains.
+PowerDNS Authoritative Server is a versatile, open-source nameserver that supports multiple backends for storing DNS records. Stackryze uses PowerDNS to power **ns1.stackryze.com** and **ns2.stackryze.com**, which manage all `indevs.in` subdomains.
 
 ---
 
@@ -469,8 +469,8 @@ For production DNS infrastructure, you need at least 2 nameservers for redundanc
 ### Stackryze Infrastructure Example
 
 Stackryze uses a master-slave setup:
-- **n1.stackryze.com** - **Master (Primary)** - Receives all DNS updates via API
-- **n2.stackryze.com** - **Slave (Secondary)** - Replicates from n1 via AXFR
+- **ns1.stackryze.com** - **Master (Primary)** - Receives all DNS updates via API
+- **ns2.stackryze.com** - **Slave (Secondary)** - Replicates from n1 via AXFR
 
 When a user updates their nameservers through the Stackryze platform, the API updates n1 (master), and n2 (slave) automatically receives the changes via AXFR zone transfer.
 
@@ -860,8 +860,8 @@ If PowerDNS seems too complex for your needs, consider these easier alternatives
 
 Stackryze uses PowerDNS to power our authoritative nameservers:
 
-- **n1.stackryze.com** (Primary) - PowerDNS Authoritative Server with PostgreSQL backend
-- **n2.stackryze.com** (Secondary) - PowerDNS Authoritative Server with PostgreSQL replication
+- **ns1.stackryze.com** (Primary) - PowerDNS Authoritative Server with PostgreSQL backend
+- **ns2.stackryze.com** (Secondary) - PowerDNS Authoritative Server with PostgreSQL replication
 
 These servers manage DNS delegation for all `indevs.in` subdomains through PowerDNS's HTTP API, allowing automated zone creation and record management when users register domains through our platform.
 
