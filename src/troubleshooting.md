@@ -299,7 +299,7 @@ Having issues? This guide covers common problems and their solutions.
 2. Try a different browser
 3. Clear browser cache and cookies
 4. Disable browser extensions
-5. Check if the service is down: [Status Page](https://status.stackryze.com/status/stackryze)
+5. Check if the service is down: [Status Page](https://status.stackryze.com/)
 
 ---
 
